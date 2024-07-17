@@ -1,0 +1,167 @@
+:root {
+    --violet: #604CC3;
+    --orange: #FF7F3E;
+    --blue: #80C4E9;
+    --light-blue:#5798FE;
+}
+
+html, body {
+    background-color: var(--blue);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+  
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+  
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+  
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+  
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+  
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+  
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.container-navbar {
+    border-radius: 16px;
+    background-color: #604CC3;
+}
+
+.a-classe {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.selling-container{
+    background-color: var(--violet);
+    border-radius: 32px;
+    margin: 0  4rem;
+    padding: 0;
+}
+
+.selling-row{
+    padding: 2rem 0;
+}
+
+.selling-big-txt{
+    font-size: 2.5rem;
+    line-height: 120%;
+    font-weight: bold;
+}
+
+.selling-complectation-block{
+    gap: 0.25rem;
+}
+
+.quotes{
+    color: var(--orange);
+}
+
+.selling-description{
+    font-size: 1rem;
+}
+
+.selling-complectaion{
+    font-size: 1.25rem;
+}
+
+.selling-price{
+    font-size: 1.5rem;
+}
+
+.selling-info{
+    gap: 1rem;
+    padding: 4rem 2rem;
+}
+
+.sellign-block-1{
+    gap: 0.5rem;
+}
+.selling-block-2{
+    gap: 0.25rem;
+}
+
+.selling-button{
+    padding: 0.75rem 2rem;
+    background-color: var(--orange);
+    border-radius: 2rem;
+}
+
+
+
+
+.my-btn {
+    background-color: var(--orange);
+    color: white;
+    border-radius: 32px;
+}
+
+.my-svg {
+    color:var(--blue);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="биом, фк пирамида, детский комплекс, детский комплекс пирамида" />
+    <meta name="description" content="ФК Пирамида предназначен" />
+
+    <link href="{% static 'bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animation.css'%}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    
+    <title>ФК Пирамида</title>
+    
+</head>
+<body>
+    <header>
+        <div class="container container-navbar mt-4 mx-5" style="width: auto; max-width: none;">
+            <div class="row py-4 justify-content-between d-none d-lg-flex">
+                <div class="col-4 px-4">
+                    <img src="{% static 'media/logo.svg'%}" alt="">
+                </div>
+                <div class="col-4 px-4 d-flex align-items-center justify-content-between">
+                    <a class="a-classe fw-bold fs-5" href="#">Преимущества</a>
+                    <a class="a-classe fw-bold fs-5" href="#">Фотографии</a>
+                    <a class="a-classe fw-bold fs-5" href="#">Отзывы</a>
+                    <a class="a-classe fw-bold fs-5" href="#">Связаться с нами</a>
+                </div>
+                <div class="col-4 px-4 d-flex align-items-center justify-content-center">
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-phone d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                        <a class="a-classe" href="#">8 980-637-27-77<a>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-envelope d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                        <a class="a-classe" href="#">info@biom.ru<a>
+                    </div>
+                    <div class="col-4 d-flex align-items-center justify-content-center">
+                        <a href="#" class="btn my-btn btn-lg px-4">Заказать<a>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container selling-container" style="width: auto; max-width: none;">
+        <div class="row selling-row d-flex justify-content-center">
+            <div class="col-6">
+                <div class="row selling-big-img"><img src="{% static 'media/shik_bg.jpg'%}" alt=""></div>
+                <div class="row">
+                    <div class="col">Мини фотки</div>
+                    <div class="col">Мини фотки</div>
+                    <div class="col">Мини фотки</div>
+                </div>
+            </div>
+            <div class="col-2 selling-info d-flex flex-column">
+                <div class="selling-block-1">
+                    <div class="row">
+                        <div class="selling-big-txt p-0">
+                            Детский  комплекс <span class="quotes">“</span>Пирамида<span class="quotes">”</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="selling-description p-0">
+                            <span class="quotes">Развивает</span> моторные навыки ребенка и подвижность. Комплекс создан, чтобы удовлетворить естественную потребность детей в движении. 
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="d-inline-flex align-items-center p-0 selling-complectation-block">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="selling-complectaion">С треком</div>
+                    </div>
+                </div>
+                <div class="sellign-block-2">
+                    <div class="row">
+                        <div class="selling-price p-0">Цена:20.000р</div>
+                    </div>
+                    <div class="row">
+                        <div class="selling-button d-flex justify-content-center">Заказать</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
