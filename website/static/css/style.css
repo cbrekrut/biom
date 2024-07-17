@@ -99,6 +99,7 @@ html, body {
 }
 
 .selling-container{
+    overflow: hidden;
     background-color: var(--violet);
     border-radius: 32px;
     margin: 0  4rem;
