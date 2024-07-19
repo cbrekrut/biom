@@ -102,18 +102,10 @@ html, body {
     overflow: hidden;
     background-color: var(--violet);
     border-radius: 32px;
-    margin: 0  4rem;
-    padding: 0;
 }
 
 .selling-row{
     padding: 2rem 0;
-}
-
-.selling-big-txt{
-    font-size: 2.5rem;
-    line-height: 120%;
-    font-weight: bold;
 }
 
 .selling-complectation-block{
@@ -154,8 +146,11 @@ html, body {
     border-radius: 2rem;
 }
 
-
-
+.navbar {
+    border-radius: 16px !important;
+    background-color: var(--violet) !important;
+    color:white;
+}
 
 .my-btn {
     background-color: var(--orange);
@@ -165,4 +160,119 @@ html, body {
 
 .my-svg {
     color:var(--blue);
+}
+
+.text-bg-dark {
+    background-color: transparent !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.offcanvas-backdrop.show {
+    opacity: .2;
+}
+
+/* Radio */
+div.radio {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: .2em;
+	margin-left: -2em;
+}
+input[type=radio] {
+	appearance: none;
+  background-color: #fff;
+  margin: 0;
+	font: inherit;
+  color: var(--blue);
+  width:2em;
+  height: 2em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+	display: grid;
+  place-content: center;
+	&::before {
+		content: "";
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		transform: scale(0);
+		transition: 120ms transform ease-in-out;
+		box-shadow: inset 1em 1em var(--violet);
+		background-color: CanvasText;
+		transform-origin: top bottom;
+	}
+	&:checked::before {
+		transform: scale(1);
+	}
+}
+
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="%2374C0FC" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>') !important;
+    border-radius: 50% !important;
+    background-color: rgb(255, 255, 255) !important;
+    opacity: 1 !important;
+}
+
+.carousel-control-prev {
+    opacity: 1 !important;
+    width: unset !important;
+}
+
+.carousel-control-next {
+    opacity: 1 !important;
+    width: unset !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="%2374C0FC" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>') !important;
+    border-radius: 50% !important;
+    background-color: rgb(255, 255, 255) !important;
+    opacity: 1 !important;
+}
+
+.mr-10 {
+    margin-top: 10vh;
+}
+
+.characteristic {
+    background-color: var(--violet);
+    color: white;
+    border-radius: 32px;
+}
+
+.equal-height {
+    height: 100%;
+    width: 100%;
+}
+
+.test{
+    position: relative;
+}
+
+.triangle{
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    
+}
+
+.form-group {
+    border-radius: 16px;
+    background-color: #5798FE;
+}
+
+input[type='text'] {
+    background-color: transparent !important;
+    border: 0;
+}
+
+.form-control {
+    color: white;
+}
+
+.form-control:focus, .form-control:hover {
+    color: white;
+    background-color: var(--orange);
 }
