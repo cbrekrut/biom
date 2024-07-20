@@ -7,7 +7,7 @@
 
 html, body {
     background-color: var(--blue);
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #fff;
@@ -15,77 +15,43 @@ html, body {
     margin: 0;
 }
 
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
+
+.montserrat-thin {
+    font-family: "Montserrat", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
-  
-.roboto-light {
-    font-family: "Roboto", sans-serif;
+
+.montserrat-thin {
+    font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
-  
-.roboto-regular {
-    font-family: "Roboto", sans-serif;
+
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-  
-.roboto-medium {
-    font-family: "Roboto", sans-serif;
+
+.montserrat-medium {
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
-  
-.roboto-bold {
-    font-family: "Roboto", sans-serif;
+
+.montserrat-bold {
+    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-style: normal;
 }
-  
-.roboto-black {
-    font-family: "Roboto", sans-serif;
+
+.montserrat-black {
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-style: normal;
 }
-  
-.roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-}
-  
-.roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-}
-  
-.roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-  
-.roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-}
-  
-.roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-}
-  
-.roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-}
+
 
 .container-navbar {
     border-radius: 16px;
@@ -154,10 +120,18 @@ html, body {
 
 .my-btn {
     background-color: var(--orange);
+    background-color: var(--orange);
     color: white;
     border-radius: 32px;
+    font-size: 24px;
+    padding: 12px 64px;
+    text-decoration: none;
+    
 }
 
+.hero-gap{
+    gap: 20px;
+}
 .my-svg {
     color:var(--blue);
 }
