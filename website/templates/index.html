@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="биом, фк пирамида, детский комплекс, детский комплекс пирамида" />
     <meta name="description" content="ФК Пирамида предназначен" />
-
     <link href="{% static 'bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <link rel="stylesheet" href="{% static 'css/animation.css'%}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,11 +32,11 @@
               <div class="align-items-center justify-content-between d-none d-lg-flex">
                 <div class="d-flex align-items-center justify-content-center mx-2">
                     <i class="fa-solid fa-phone d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
-                    <a class="a-classe" href="#">8 980-637-27-77<a>
+                    <a class="a-classe" href="tel:89806372777">8 980-637-27-77<a>
                 </div>
                 <div class="d-flex align-items-center justify-content-center mx-2">
                     <i class="fa-solid fa-envelope d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
-                    <a class="a-classe" href="#">info@biom.ru<a>
+                    <a class="a-classe" href="mailto:info@biom.ru">info@biom.ru<a>
                 </div>
                 <div class="d-flex align-items-center justify-content-center mx-2">
                     <a href="#big-form" class="btn my-btn btn-lg px-4">Заказать<a></a>
@@ -61,11 +62,11 @@
                   <div class="d-flex d-lg-none flex-column">
                     <div class="d-flex align-items-center justify-content-center mx-2">
                         <i class="fa-solid fa-phone d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
-                        <a class="a-classe" href="#">8 980-637-27-77<a>
+                        <a class="a-classe" href="tel:89806372777">8 980-637-27-77<a>
                       </div>
                       <div class="d-flex align-items-center justify-content-center mx-2">
                             <i class="fa-solid fa-envelope d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
-                            <a class="a-classe" href="#">info@biom.ru<a>
+                            <a class="a-classe" href="mailto:info@biom.ru">info@biom.ru<a>
                       </div>
                       <div class="d-flex align-items-center justify-content-center mx-2">
                             <a href="#big-form" class="btn my-btn  text-center btn-lg px-4">Заказать<a></a>
@@ -76,646 +77,649 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="container mr-10 pt-5 mb-5 pb-5" style="position: relative; height: 100vh;">
-            <i class="fa-solid fa-cloud fa-7x cloud-1" style="color:#604CC3; position: absolute;top:20%; left:-25%; z-index: 0;"></i>
-            <i class="fa-solid fa-cloud fa-7x cloud-2 d-none d-lg-block" style="color:#604CC3; position: absolute;left:-10%; bottom: 10%; z-index: 0;"></i>
-            <i class="fa-solid fa-cloud fa-9x cloud-3 d-none d-lg-block" style="color:#604CC3; position: absolute;position: absolute; left: -5%; bottom:10%; z-index: 0;"></i>
-            <i class="fa-solid fa-cloud fa-7x cloud-4 d-none d-lg-block" style="color:#604CC3; position: absolute;top:40%;right: 40%; z-index: 0;"></i>
-            <i class="fa-solid fa-cloud fa-10x cloud-4 d-none d-lg-block" style="color:#604CC3; position: absolute;top:5%;right: 25%; z-index: 0;"></i>
-            <i class="fa-solid fa-cloud fa-7x cloud-5 d-none d-lg-block"  style="color:#604CC3; position: absolute; right: -20%; bottom:15%; z-index: 0;"></i>
-            <i class="fa-solid fa-sun fa-10x sun-1 d-none d-md-block" style="color:#FF7F3E; position: absolute; top:10%;right: 5%; z-index: 0;"></i>
-            <div class="row d-flex align-items-center justify-content-center mt-5 pt-5">
-                <div class="col-12 col-md-6 pb-5 pb-md-0 d-flex flex-column hero-gap">
-                    <span class="display-4" style="z-index: 10;  font-weight: 500;">
-                        Подарите детям <span style="color:#FF7F3E; font-weight: 700;">радость</span><br> движения <br>с СК <span style="color:#FF7F3E;font-weight: 700;">"</span>Пирамида<span><span style="color:#FF7F3E;font-weight: 700;">"</span>
-                    </span>
-                    <a href="#big-form" class=" my-btn text-center">Заказать</a>
-                </div>
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column mt-5 mt-md-0 pt-5 pt-md-0" style="position: relative;">
-                    <img src="{% static "media/hero_child.webp" %}" alt="child" style="z-index:1; object-fit: contain; position: relative; height: 100%; width: 100%;">
-                    <img src="{% static "media/newspaper.webp" %}" alt="newspaper" style="z-index:0; bottom:40%; object-fit: contain; height: 100%; width: 100%; position: absolute; bottom: 10%;">
+        <main>
+            <div class="hero">
+                <div class="container mr-10 pt-5 mb-5 pb-5" style="position: relative; height: 100vh;">
+                    <i class="fa-solid fa-cloud fa-7x cloud-1" style="color:#604CC3; position: absolute;top:20%; left:-25%; z-index: 0;"></i>
+                    <i class="fa-solid fa-cloud fa-7x cloud-2 d-none d-lg-block" style="color:#604CC3; position: absolute;left:-10%; bottom: 10%; z-index: 0;"></i>
+                    <i class="fa-solid fa-cloud fa-9x cloud-3 d-none d-lg-block" style="color:#604CC3; position: absolute;position: absolute; left: -5%; bottom:10%; z-index: 0;"></i>
+                    <i class="fa-solid fa-cloud fa-7x cloud-4 d-none d-lg-block" style="color:#604CC3; position: absolute;top:40%;right: 40%; z-index: 0;"></i>
+                    <i class="fa-solid fa-cloud fa-10x cloud-4 d-none d-lg-block" style="color:#604CC3; position: absolute;top:5%;right: 25%; z-index: 0;"></i>
+                    <i class="fa-solid fa-cloud fa-7x cloud-5 d-none d-lg-block"  style="color:#604CC3; position: absolute; right: -20%; bottom:15%; z-index: 0;"></i>
+                    <i class="fa-solid fa-sun fa-10x sun-1 d-none d-md-block" style="color:#FF7F3E; position: absolute; top:10%;right: 5%; z-index: 0;"></i>
+                    <div class="row d-flex align-items-center justify-content-center mt-5 pt-5">
+                        <div class="col-12 col-md-6 pb-5 pb-md-0 d-flex flex-column hero-gap">
+                            <span class="display-4" style="z-index: 10;  font-weight: 500;">
+                                Подарите детям <span style="color:#FF7F3E; font-weight: 700;">радость</span><br> движения <br>с СК <span style="color:#FF7F3E;font-weight: 700;">"</span>Пирамида<span><span style="color:#FF7F3E;font-weight: 700;">"</span>
+                            </span>
+                            <a href="#big-form" class=" my-btn text-center">Заказать</a>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center flex-column mt-5 mt-md-0 pt-5 pt-md-0" style="position: relative;">
+                            <img src="{% static "media/hero_child.webp" %}" alt="child" style="z-index:1; object-fit: contain; position: relative; height: 100%; width: 100%;">
+                            <img src="{% static "media/newspaper.webp" %}" alt="newspaper" style="z-index:0; bottom:40%; object-fit: contain; height: 100%; width: 100%; position: absolute; bottom: 10%;">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container selling-container" style="position: relative;">
-            <div class="row selling-row d-flex justify-content-center align-items-center">
-                <div class="col-12 col-lg-6" style="z-index:1; height:50vh;">
-                        <div id="carouselOptions" class="carousel slide" style="height: 100%;">
-                            <div class="carousel-inner" style="height: 100%;">
-                                <div class="carousel-item active" style="height: 100%;">
-                                    <img src="{% static "media/1.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+            <div class="container selling-container" style="position: relative;">
+                <div class="row selling-row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-lg-6" style="z-index:1; height:50vh;">
+                            <div id="carouselOptions" class="carousel slide" style="height: 100%;">
+                                <div class="carousel-inner" style="height: 100%;">
+                                    <div class="carousel-item active" style="height: 100%;">
+                                        <img src="{% static "media/1.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/2.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/3.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/4.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/5.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/6.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/7.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/8.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/9.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                        <img src="{% static "media/10.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                    </div>
                                 </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/2.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/3.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/4.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/5.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/6.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/7.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/8.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/9.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                </div>
-                                <div class="carousel-item" style="height: 100%;">
-                                    <img src="{% static "media/10.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselOptions" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselOptions" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                    </div>
+                    <div class="col-10 col-lg-4 selling-info d-flex flex-column ani-selling-col">
+                        <div class="selling-block-1">
+                            <div class="row mb-2" style="z-index: 1;">
+                                <div class="display-6 fw-bold p-0" style="z-index: 1;">
+                                    Детский  комплекс <span class="quotes">“</span>Пирамида<span class="quotes">”</span>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselOptions" data-bs-slide="prev">
+                            <div class="row" style="z-index: 1;">
+                                <div class="selling-description p-0">
+                                    <span class="quotes">Развивает</span> моторные навыки ребенка и подвижность. Комплекс создан, чтобы удовлетворить естественную потребность детей в движении. 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex" style="z-index: 1;">
+                            <div class="d-inline-flex align-items-center p-0 selling-complectation-block">
+                                <input type="radio" name="radio" checked>
+                                <div class="selling-complectaion">Базовая</div>
+                            </div>
+                            <div class="d-inline-flex align-items-center p-0 selling-complectation-block mt-2">
+                                <input type="radio" name="radio">
+                                <div class="selling-complectaion">Стандартная</div>
+                            </div>
+                            <div class="d-inline-flex align-items-center p-0 selling-complectation-block mt-2">
+                                <input type="radio" name="radio">
+                                <div class="selling-complectaion">Премиум</div>
+                            </div>
+                        </div>
+                        <div class="sellign-block-2">
+                            <div class="row" style="z-index: 1;">
+                                <div class="selling-price p-0">Цена: 20.000р</div>
+                            </div>
+                            <div class="row">
+                                <a href="#big-form" class="btn btn-lg my-btn d-flex justify-content-center" style="z-index: 1;">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <i class="fa-regular fa-star star-1 fa-10x" style="position: absolute; top:15%; left: -3%; z-index: 0; color:#80C4E9;transform: rotate(45deg);"></i>
+                <i class="fa-regular fa-star star-2 fa-5x" style="position: absolute; right:2%; bottom: 10%; z-index: 0; color:#80C4E9;
+                transform: rotate(15deg);"></i>
+                
+            </div>
+            <div class="container mt-5 pt-5 gallery-1" id="photos">
+                <div class="row">
+                    <div class="col-12 d-none d-md-block">
+                        <div id="carouselVideo" class="carousel slide" style="height: 400px;">
+                            <div class="carousel-inner" style="height: 100%;">
+                                <div class="carousel-item active" style="height: 100%;">
+                                    <div class="d-none d-md-flex flex-row justify-content-center align-items-center" style="gap: 1rem; border-radius: 32px; height: 100%;">
+                                        <a href="{% static "media/galery/galery.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/galery/galery2.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery2.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/galery/galery3.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery3.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/galery/galery4.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery4.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                    <div class="d-none d-md-flex flex-row justify-content-center align-items-center"  style="gap: 1rem; height: 100%;">
+                                        <a href="{% static "media/galery/galery5.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery5.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/galery/galery6.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery6.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/galery/galery7.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery7.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideo" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselOptions" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselVideo" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                </div>
-                <div class="col-10 col-lg-4 selling-info d-flex flex-column">
-                    <div class="selling-block-1">
-                        <div class="row mb-2" style="z-index: 1;">
-                            <div class="display-6 fw-bold p-0" style="z-index: 1;">
-                                Детский  комплекс <span class="quotes">“</span>Пирамида<span class="quotes">”</span>
-                            </div>
-                        </div>
-                        <div class="row" style="z-index: 1;">
-                            <div class="selling-description p-0">
-                                <span class="quotes">Развивает</span> моторные навыки ребенка и подвижность. Комплекс создан, чтобы удовлетворить естественную потребность детей в движении. 
-                            </div>
-                        </div>
                     </div>
-                    <div class="row d-flex" style="z-index: 1;">
-                        <div class="d-inline-flex align-items-center p-0 selling-complectation-block">
-                            <input type="radio" name="radio" checked>
-                            <div class="selling-complectaion">Базовая</div>
-                        </div>
-                        <div class="d-inline-flex align-items-center p-0 selling-complectation-block mt-2">
-                            <input type="radio" name="radio">
-                            <div class="selling-complectaion">Стандартная</div>
-                        </div>
-                        <div class="d-inline-flex align-items-center p-0 selling-complectation-block mt-2">
-                            <input type="radio" name="radio">
-                            <div class="selling-complectaion">Премиум</div>
-                        </div>
-                    </div>
-                    <div class="sellign-block-2">
-                        <div class="row" style="z-index: 1;">
-                            <div class="selling-price p-0">Цена: 20.000р</div>
-                        </div>
-                        <div class="row">
-                            <a href="#big-form" class="btn btn-lg my-btn d-flex justify-content-center" style="z-index: 1;">Заказать</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <i class="fa-regular fa-star star-1 fa-10x" style="position: absolute; top:15%; left: -3%; z-index: 0; color:#80C4E9;transform: rotate(45deg);"></i>
-            <i class="fa-regular fa-star star-2 fa-5x" style="position: absolute; right:2%; bottom: 10%; z-index: 0; color:#80C4E9;
-            transform: rotate(15deg);"></i>
-            
-        </div>
-        <div class="container mt-5 pt-5" id="photos">
-            <div class="row">
-                <div class="col-12 d-none d-md-block">
-                    <div id="carouselVideo" class="carousel slide" style="height: 400px;">
-                        <div class="carousel-inner" style="height: 100%;">
-                            <div class="carousel-item active" style="height: 100%;">
-                                <div class="d-none d-md-flex flex-row justify-content-center align-items-center" style="gap: 1rem; border-radius: 32px; height: 100%;">
+                    <div class="col-12 d-block d-md-none">
+                        <div id="carouselVideoSM" class="carousel slide" style="height: 400px;">
+                            <div class="carousel-inner" style="height: 100%;">
+                                <div class="carousel-item active" style="height: 100%;">
                                     <a href="{% static "media/galery/galery.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/galery/galery2.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery2.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/galery/galery3.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery3.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/galery/galery4.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery4.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                                </div>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <div class="d-none d-md-flex flex-row justify-content-center align-items-center"  style="gap: 1rem; height: 100%;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/galery/galery5.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery5.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/galery/galery6.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery6.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/galery/galery7.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery7.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                                </div>
-                              </div>
+                                    </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideoSM" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselVideoSM" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideo" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVideo" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
-                <div class="col-12 d-block d-md-none">
-                    <div id="carouselVideoSM" class="carousel slide" style="height: 400px;">
-                        <div class="carousel-inner" style="height: 100%;">
-                            <div class="carousel-item active" style="height: 100%;">
-                                <a href="{% static "media/galery/galery.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/galery/galery2.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery2.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/galery/galery3.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery3.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/galery/galery4.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery4.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/galery/galery5.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery5.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/galery/galery6.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery6.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/galery/galery7.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery7.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
+            </div>
+            
+            <div class="container mt-5 pt-5" id="characteristic-cont">
+                <div class="row">
+                    <div class="col-12 col-lg-5 characteristic px-5 py-5 left-part">
+                        <span class="display-6 montserrat-medium" style="font-weight: 600;">
+                            Характеристики комплекса
+                        </span><br>
+                        <span class="montserrat-medium" style="font-size: 16px;">
+                            <span style="color:#FF7F3E;">Пять</span> вариантов установки комплекса и <span style="color:#FF7F3E;">навесное оборудование</span> создают новые двигательные возможности для ребенка каждый день. 
+                        </span>
+                        <div class="d-flex align-items-center mt-4">
+                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                            <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Подходит детям от 6 месяцев до 4 лет</span>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideoSM" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVideoSM" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="container mt-5 pt-5" id="characteristic-cont">
-            <div class="row">
-                <div class="col-12 col-lg-5 characteristic px-5 py-5">
-                    <span class="display-6 montserrat-medium" style="font-weight: 600;">
-                        Характеристики комплекса
-                    </span><br>
-                    <span class="montserrat-medium" style="font-size: 16px;">
-                        <span style="color:#FF7F3E;">Пять</span> вариантов установки комплекса и <span style="color:#FF7F3E;">навесное оборудование</span> создают новые двигательные возможности для ребенка каждый день. 
-                    </span>
-                    <div class="d-flex align-items-center mt-4">
-                        <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                        <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Подходит детям от 6 месяцев до 4 лет</span>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                        <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                        <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Не нуждается в креплении к полу, стенам</span>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                        <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                        <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Европейское качество материалов</span>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                        <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                        <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Продуманная, безопасная конструкция</span>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                        <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                        <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Для игр в помещениях и на открытом воздухе</span>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                        <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                        <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Компактная, требует всего 1.3 кв м</span>
-                    </div>
-                    <a href="#big-form" class="btn btn-lg my-btn d-flex justify-content-center mt-3" style="z-index: 1;">Заказать</a>
-                    <div class="btn btn-lg my-btn d-flex justify-content-center mt-3" style="z-index: 1; background-color: #80C4E9;">Скачать инструкцию по сборке</div>
-                </div>
-                
-                <div class="col-lg-7 d-none col-md-12 d-lg-block">
-                    <img src="{% static "media/galery/galery5.JPG" %}" alt="" style="object-fit: cover; height: 100%; width: 100%; border-radius: 32px;">
-                </div>
-            </div>
-        </div>
-        <div class="container mt-5 py-5">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-12 mb-4 text-center">
-                    <span class="display-5">А еще...</span>
-                </div>
-                <div class="col-12 col-md-4 text-center">
-                    <i class="fa-solid fa-child-combatant fa-3x mb-3" style="color:#FF7F3E;"></i><br>
-                    <span class="fs-5">Доступна детям с ОВЗ</span>
-                </div>
-                <div class="col-12 col-md-4 text-center">
-                    <i class="fa-solid fa-people-roof fa-3x mb-3" style="color:#FF7F3E;"></i><br>
-                    <span class="fs-5">Можно использовать в детских садах</span>
-                </div>
-                <div class="col-12 col-md-4 text-center">
-                    <i class="fa-solid fa-star fa-3x mb-3" style="color:#FF7F3E;"></i><br>
-                    <span class="fs-5">Не требует крепления к полу или стене</span>
-                </div>
-            </div>
-        </div>
-        <div class="container mt-5 pt-5">
-            <div class="row">
-                <div class="col-12 mb-4 text-center">
-                    <span class="display-5">Варианты установки</span>
-                </div>
-                <div class="col-12">
-                    <div id="carouselVariants" class="carousel slide">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                <div class="col-12 col-md-4">
-                                    <img src="{% static "media/position/1.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
-                                    <span class="fs-2">
-                                        Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
-                                    </span><br>
-                                    <span>
-                                        Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
-                                    </span>
-                                    <div class="characteristic px-lg-5 py-5">
-                                        <div class="d-flex align-items-center mt-4">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> подходит детям от 6 месяцев до 4 лет</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> не нуждается в креплении к полу, стенам</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> Европейское качество материалов</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                <div class="col-12 col-md-4">
-                                    <img src="{% static "media/position/2.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
-                                    <span class="fs-2">
-                                        Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
-                                    </span><br>
-                                    <span>
-                                        Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
-                                    </span>
-                                    <div class="characteristic px-lg-5 py-5">
-                                        <div class="d-flex align-items-center mt-4">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> подходит детям от 6 месяцев до 4 лет</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> не нуждается в креплении к полу, стенам</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> Европейское качество материалов</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                <div class="col-12 col-md-4">
-                                    <img src="{% static "media/position/3.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
-                                    <span class="fs-2">
-                                        Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
-                                    </span><br>
-                                    <span>
-                                        Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
-                                    </span>
-                                    <div class="characteristic px-lg-5 py-5">
-                                        <div class="d-flex align-items-center mt-4">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> подходит детям от 6 месяцев до 4 лет</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> не нуждается в креплении к полу, стенам</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> Европейское качество материалов</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                <div class="col-12 col-md-4">
-                                    <img src="{% static "media/position/4.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
-                                    <span class="fs-2">
-                                        Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
-                                    </span><br>
-                                    <span>
-                                        Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
-                                    </span>
-                                    <div class="characteristic px-lg-5 py-5">
-                                        <div class="d-flex align-items-center mt-4">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> подходит детям от 6 месяцев до 4 лет</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> не нуждается в креплении к полу, стенам</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> Европейское качество материалов</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                <div class="col-12 col-md-4">
-                                    <img src="{% static "media/position/5.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
-                                    <span class="fs-2">
-                                        Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
-                                    </span><br>
-                                    <span>
-                                        Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
-                                    </span>
-                                    <div class="characteristic px-lg-5 py-5">
-                                        <div class="d-flex align-items-center mt-4">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> подходит детям от 6 месяцев до 4 лет</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> не нуждается в креплении к полу, стенам</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> Европейское качество материалов</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                                <div class="col-12 col-md-4">
-                                    <img src="{% static "media/position/6.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
-                                    <span class="fs-2">
-                                        Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
-                                    </span><br>
-                                    <span>
-                                        Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
-                                    </span>
-                                    <div class="characteristic px-lg-5 py-5">
-                                        <div class="d-flex align-items-center mt-4">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> подходит детям от 6 месяцев до 4 лет</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> не нуждается в креплении к полу, стенам</span>
-                                        </div>
-                                        <div class="d-flex align-items-center mt-3">
-                                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
-                                            <span> Европейское качество материалов</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
+                        <div class="d-flex align-items-center mt-3">
+                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                            <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Не нуждается в креплении к полу, стенам</span>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVariants" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVariants" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
+                        <div class="d-flex align-items-center mt-3">
+                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                            <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Европейское качество материалов</span>
+                        </div>
+                        <div class="d-flex align-items-center mt-3">
+                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                            <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Продуманная, безопасная конструкция</span>
+                        </div>
+                        <div class="d-flex align-items-center mt-3">
+                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                            <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Для игр в помещениях и на открытом воздухе</span>
+                        </div>
+                        <div class="d-flex align-items-center mt-3">
+                            <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                            <span class="montserrat-bold fs-5 ms-1" style="font-weight: 500;"> Компактная, требует всего 1.3 кв м</span>
+                        </div>
+                        <a href="#big-form" class="btn btn-lg my-btn d-flex justify-content-center mt-3" style="z-index: 1;">Заказать</a>
+                        <div class="btn btn-lg my-btn d-flex justify-content-center mt-3" style="z-index: 1; background-color: #80C4E9;">Скачать инструкцию по сборке</div>
+                    </div>
+                    
+                    <div class="col-lg-7 d-none col-md-12 d-lg-block right-part">
+                        <img src="{% static "media/galery/galery5.JPG" %}" alt="" style="object-fit: cover; height: 100%; width: 100%; border-radius: 32px;">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container mt-5 pt-5" id="feedback">
-            <div class="row align-items-center justify-content-evenly d-flex">
-                <div class="col-12 col-lg-3 mt-5 mt-lg-0 d-flex align-items-center justify-content-center flex-column" style="position: relative; height: 100%; padding:0;">
-                    <div class="equal-height py-4 px-5" style="background-color: #FB486F; border-radius: 16px;">
+            <div class="container mt-5 py-5">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 mb-4 text-center">
+                        <span class="display-5">А еще...</span>
+                    </div>
+                    <div class="col-12 col-md-4 text-center item-good-1">
+                        <i class="fa-solid fa-child-combatant fa-3x mb-3" style="color:#FF7F3E;"></i><br>
+                        <span class="fs-5">Доступна детям с ОВЗ</span>
+                    </div>
+                    <div class="col-12 col-md-4 text-center item-good-2">
+                        <i class="fa-solid fa-people-roof fa-3x mb-3" style="color:#FF7F3E;"></i><br>
+                        <span class="fs-5">Можно использовать в детских садах</span>
+                    </div>
+                    <div class="col-12 col-md-4 text-center item-good-3">
+                        <i class="fa-solid fa-star fa-3x mb-3" style="color:#FF7F3E;"></i><br>
+                        <span class="fs-5">Не требует крепления к полу или стене</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5 pt-5 variants-ani">
+                <div class="row">
+                    <div class="col-12 mb-4 text-center">
+                        <span class="display-5">Варианты установки</span>
+                    </div>
+                    <div class="col-12">
+                        <div id="carouselVariants" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                                    <div class="col-12 col-md-4">
+                                        <img src="{% static "media/position/1.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
+                                        <span class="fs-2">
+                                            Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
+                                        </span><br>
+                                        <span>
+                                            Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
+                                        </span>
+                                        <div class="characteristic px-lg-5 py-5">
+                                            <div class="d-flex align-items-center mt-4">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> подходит детям от 6 месяцев до 4 лет</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> не нуждается в креплении к полу, стенам</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> Европейское качество материалов</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                                    <div class="col-12 col-md-4">
+                                        <img src="{% static "media/position/2.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
+                                        <span class="fs-2">
+                                            Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
+                                        </span><br>
+                                        <span>
+                                            Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
+                                        </span>
+                                        <div class="characteristic px-lg-5 py-5">
+                                            <div class="d-flex align-items-center mt-4">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> подходит детям от 6 месяцев до 4 лет</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> не нуждается в креплении к полу, стенам</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> Европейское качество материалов</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                                    <div class="col-12 col-md-4">
+                                        <img src="{% static "media/position/3.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
+                                        <span class="fs-2">
+                                            Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
+                                        </span><br>
+                                        <span>
+                                            Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
+                                        </span>
+                                        <div class="characteristic px-lg-5 py-5">
+                                            <div class="d-flex align-items-center mt-4">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> подходит детям от 6 месяцев до 4 лет</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> не нуждается в креплении к полу, стенам</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> Европейское качество материалов</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                                    <div class="col-12 col-md-4">
+                                        <img src="{% static "media/position/4.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
+                                        <span class="fs-2">
+                                            Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
+                                        </span><br>
+                                        <span>
+                                            Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
+                                        </span>
+                                        <div class="characteristic px-lg-5 py-5">
+                                            <div class="d-flex align-items-center mt-4">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> подходит детям от 6 месяцев до 4 лет</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> не нуждается в креплении к полу, стенам</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> Европейское качество материалов</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                                    <div class="col-12 col-md-4">
+                                        <img src="{% static "media/position/5.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
+                                        <span class="fs-2">
+                                            Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
+                                        </span><br>
+                                        <span>
+                                            Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
+                                        </span>
+                                        <div class="characteristic px-lg-5 py-5">
+                                            <div class="d-flex align-items-center mt-4">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> подходит детям от 6 месяцев до 4 лет</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> не нуждается в креплении к полу, стенам</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> Европейское качество материалов</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="carousel-item">
+                                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                                    <div class="col-12 col-md-4">
+                                        <img src="{% static "media/position/6.webp" %}" alt="..." style="width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="col-12 col-md-5 ms-md-5 me-md-2 ms-md-0 pt-5 px-5" style="background-color: #604CC3; color: white; border-radius: 32px;">
+                                        <span class="fs-2">
+                                            Что научится делать ребенок при этом варианте установки<span class="fw-bold" style="color: #FF7F3E;">?</span> 
+                                        </span><br>
+                                        <span>
+                                            Этот вариант предназначен для самых маленьких и поможет укрепить мышцы и крепко стоять на ногах.
+                                        </span>
+                                        <div class="characteristic px-lg-5 py-5">
+                                            <div class="d-flex align-items-center mt-4">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> подходит детям от 6 месяцев до 4 лет</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> не нуждается в креплении к полу, стенам</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mt-3">
+                                                <i class="fa-solid fa-circle-check fa-2x" style="color:#FF7F3E;"></i>
+                                                <span> Европейское качество материалов</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVariants" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselVariants" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5 pt-5" id="feedback">
+                <div class="row align-items-center justify-content-evenly d-flex">
+                    <div class="col-12 col-lg-3 mt-5 mt-lg-0 d-flex align-items-center justify-content-center flex-column feedback-ani-1" style="position: relative; height: 100%; padding:0;">
+                        <div class="equal-height py-4 px-5" style="background-color: #FB486F; border-radius: 16px;">
+                            <span>
+                                Благодарю за классный комплекс! Радует то, что интуитивно малыш сам разобрался, что с ним делать. Компактный, можно домик устроить внутри и халабуду))))
+                            </span>
+                        </div>
+                        <div class="d-flex mt-1 mt-lg-2">
+                            <img src="{% static "media/comm/3.webp" %}" alt="" style="object-fit: cover; width: 3em; height: 3em; border-radius:50%;" class="me-2">
+                            <div>
+                                <span>Татьяна</span><br>
+                                <span class="fs-6">Мать 2 детей</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 mt-5 mt-lg-0 d-flex align-items-center justify-content-center flex-column feedback-ani-2" style="position: relative; height: 100%; padding:0;">
+                        <div class="equal-height py-4 px-5" style="background-color: #3975ee; border-radius: 16px;">
+                            <span>
+                                Хочу выразить благодарность сотрудникам Андрею и Сергею за помощь в решении моего вопроса по спортивному комплексу “Пирамида”.
+                            </span>
+                        </div>
+                        <div class="d-flex mt-1 mt-lg-2">
+                            <img src="{% static "media/comm/2.webp" %}" alt="" style="object-fit: cover; width: 3em; height: 3em; border-radius:50%;" class="me-2">
+                            <div>
+                                <span>Андрей</span><br>
+                                <span class="fs-6">Отец</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 mt-5 mt-lg-0 d-flex align-items-center justify-content-center flex-column feedback-ani-3" style="position: relative; height: 100%; padding:0;">
+                        <div class="equal-height py-4 px-5" style="background-color: #FB486F; border-radius: 16px;">
+                            <span>
+                                Очень понравился комплекс, сын с удовольствием проводит на нем время! Особенно когда в дождливый день не выйти на площадку
+                            </span>
+                        </div>
+                        <div class="d-flex mt-1 mt-lg-2">
+                            <img src="{% static "media/comm/1.webp" %}" alt="" style="object-fit: cover; width: 3em; height: 3em; border-radius:50%;" class="me-2">
+                            <div>
+                                <span>Елена</span><br>
+                                <span class="fs-6">Мать 3 детей</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5 pt-5" id="big-form">
+                <div class="row">
+                    <div class="col-12 col-lg-8 form-ani-left">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-12 col-lg-4 py-5 px-5 form-ani-right" style="background-color:#604CC3; border-radius:16px;">
+                        <span class="fw-bold fs-1">Свяжитесь с нами!</span>
+                        <form action="" method="post" id="form">
+                            {% csrf_token %}
+                            <div class="form-group mb-2 mt-3">
+                                <input id="phone" aria-label="Номер телефона" type="text" name="phone" placeholder="Номер телефона" class="form-control fs-5">
+                                <div class="error text-start fs-5 fw-light"></div>
+                            </div>
+                            <div class="form-group mb-2">
+                                <input id="Email" aria-label="Email" type="text" name="Email" placeholder="Email" class="form-control fs-5">
+                                <div class="error text-start fs-5 fw-light"></div>
+                            </div>
+                            <div class="form-group mb-2">
+                                <div class="error text-start fs-5 fw-light"></div>
+                            </div>
+                            <div class="row justify-content-center mt-2">
+                                <div class="col-5 text-end">
+                                    <a class="btn my-btn py-2 px-5" href="" style="background-color: #2cb742;">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                                <div class="col-5 text-start">
+                                    <a class="btn my-btn py-2 px-5" href="" style="background-color: #27a7e7;">
+                                        <i class="fa-brands fa-telegram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="form-group mb-2 mt-3" style="background-color: transparent;">
+                                <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 fs-4" style="width: 100%; border-radius:32px; background-color:#FF7F3E;">
+                            </div>
+                        </form>
                         <span>
-                            Благодарю за классный комплекс! Радует то, что интуитивно малыш сам разобрался, что с ним делать. Компактный, можно домик устроить внутри и халабуду))))
+                            Нажимая заказать вы соглашаетесь с <a href="#">Политикой Конфиденциальности</a>
                         </span>
                     </div>
-                    <div class="d-flex mt-1 mt-lg-2">
-                        <img src="{% static "media/comm/3.webp" %}" alt="" style="object-fit: cover; width: 3em; height: 3em; border-radius:50%;" class="me-2">
-                        <div>
-                            <span>Татьяна</span><br>
-                            <span class="fs-6">Мать 2 детей</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 mt-5 mt-lg-0 d-flex align-items-center justify-content-center flex-column" style="position: relative; height: 100%; padding:0;">
-                    <div class="equal-height py-4 px-5" style="background-color: #3975ee; border-radius: 16px;">
-                        <span>
-                            Хочу выразить благодарность сотрудникам Андрею и Сергею за помощь в решении моего вопроса по спортивному комплексу “Пирамида”.
-                        </span>
-                    </div>
-                    <div class="d-flex mt-1 mt-lg-2">
-                        <img src="{% static "media/comm/2.webp" %}" alt="" style="object-fit: cover; width: 3em; height: 3em; border-radius:50%;" class="me-2">
-                        <div>
-                            <span>Андрей</span><br>
-                            <span class="fs-6">Отец</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 mt-5 mt-lg-0 d-flex align-items-center justify-content-center flex-column" style="position: relative; height: 100%; padding:0;">
-                    <div class="equal-height py-4 px-5" style="background-color: #FB486F; border-radius: 16px;">
-                        <span>
-                            Очень понравился комплекс, сын с удовольствием проводит на нем время! Особенно когда в дождливый день не выйти на площадку
-                        </span>
-                    </div>
-                    <div class="d-flex mt-1 mt-lg-2">
-                        <img src="{% static "media/comm/1.webp" %}" alt="" style="object-fit: cover; width: 3em; height: 3em; border-radius:50%;" class="me-2">
-                        <div>
-                            <span>Елена</span><br>
-                            <span class="fs-6">Мать 3 детей</span>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container mt-5 pt-5" id="big-form">
-            <div class="row">
-                <div class="col-12 col-lg-8">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="col-12 col-lg-4 py-5 px-5" style="background-color:#604CC3; border-radius:16px;">
-                    <span class="fw-bold fs-1">Свяжитесь с нами!</span>
-                    <form action="" method="post" id="form">
-                        {% csrf_token %}
-                        <div class="form-group mb-2 mt-3">
-                          <input id="phone" aria-label="Номер телефона" type="text" name="phone" placeholder="Номер телефона" class="form-control fs-5">
-                          <div class="error text-start fs-5 fw-light"></div>
-                        </div>
-                        <div class="form-group mb-2">
-                          <input id="Email" aria-label="Email" type="text" name="Email" placeholder="Email" class="form-control fs-5">
-                          <div class="error text-start fs-5 fw-light"></div>
-                        </div>
-                        <div class="form-group mb-2">
-                          <div class="error text-start fs-5 fw-light"></div>
-                        </div>
-                        <div class="row justify-content-center mt-2">
-                            <div class="col-5 text-end">
-                                <a class="btn my-btn py-2 px-5" href="" style="background-color: #2cb742;">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </a>
+            <div class="container mt-5 pt-5">
+                <div class="row">
+                    <div class="col-12 d-none d-md-block">
+                        <div id="carouselSert" class="carousel slide" style="height: 400px;">
+                            <div class="carousel-inner" style="height: 100%;">
+                                <div class="carousel-item active" style="height: 100%;">
+                                    <div class="d-none d-md-flex flex-row justify-content-center align-items-center" style="gap: 1rem; border-radius: 32px; height: 100%;">
+                                        <a href="{% static "media/svid/svid.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/svid/svid2.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid2.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/svid/svid3.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid3.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/svid/svid4.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid4.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                    <div class="d-none d-md-flex flex-row justify-content-center align-items-center"  style="gap: 1rem; height: 100%;">
+                                        <a href="{% static "media/svid/svid5.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid5.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/svid/svid6.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid6.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                        <a href="{% static "media/svid/svid7.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid7.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    </div>
                             </div>
-                            <div class="col-5 text-start">
-                                <a class="btn my-btn py-2 px-5" href="" style="background-color: #27a7e7;">
-                                    <i class="fa-brands fa-telegram"></i>
-                                </a>
-                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSert" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselSert" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <div class="form-group mb-2 mt-3" style="background-color: transparent;">
-                          <input type="submit" value="Оставить заявку" class="btn btn-primary py-3 px-5 fs-4" style="width: 100%; border-radius:32px; background-color:#FF7F3E;">
-                        </div>
-                    </form>
-                    <span>
-                        Нажимая заказать вы соглашаетесь с <a href="#">Политикой Конфиденциальности</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="container mt-5 pt-5">
-            <div class="row">
-                <div class="col-12 d-none d-md-block">
-                    <div id="carouselSert" class="carousel slide" style="height: 400px;">
-                        <div class="carousel-inner" style="height: 100%;">
-                            <div class="carousel-item active" style="height: 100%;">
-                                <div class="d-none d-md-flex flex-row justify-content-center align-items-center" style="gap: 1rem; border-radius: 32px; height: 100%;">
+                    </div>
+                    <div class="col-12 d-block d-md-none">
+                        <div id="carouselSertSM" class="carousel slide" style="height: 400px;">
+                            <div class="carousel-inner" style="height: 100%;">
+                                <div class="carousel-item active" style="height: 100%;">
                                     <a href="{% static "media/svid/svid.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/svid/svid2.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid2.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/svid/svid3.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid3.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/svid/svid4.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid4.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                                </div>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <div class="d-none d-md-flex flex-row justify-content-center align-items-center"  style="gap: 1rem; height: 100%;">
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/svid/svid5.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid5.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/svid/svid6.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid6.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
                                     <a href="{% static "media/svid/svid7.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid7.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                                </div>
-                              </div>
+                                    </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSertSM" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselSertSM" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSert" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselSert" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-12 d-block d-md-none">
-                    <div id="carouselSertSM" class="carousel slide" style="height: 400px;">
-                        <div class="carousel-inner" style="height: 100%;">
-                            <div class="carousel-item active" style="height: 100%;">
-                                <a href="{% static "media/svid/svid.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/svid/svid2.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid2.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/svid/svid3.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid3.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/svid/svid4.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid4.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/svid/svid5.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid5.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/svid/svid6.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid6.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                              <div class="carousel-item" style="height: 100%;">
-                                <a href="{% static "media/svid/svid7.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/svid/svid7.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
-                              </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSertSM" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselSertSM" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container mt-5" style="background-color: #604CC3; border-radius:16px;">
-            <div class="row align-items-center justify-content-center pt-2">
-                <div style="width: fit-content;">
-                    <img src="{% static "media/logo.svg" %}" alt="">
+        </main>
+        <footer>
+            <div class="container mt-5" style="background-color: #604CC3; border-radius:16px;">
+                <div class="row align-items-center justify-content-center pt-2">
+                    <div style="width: fit-content;">
+                        <img src="{% static "media/logo.svg" %}" alt="">
+                    </div>
+                    <div style="width: fit-content;" class="ms-5 me-5 d-none d-md-block">
+                        <a href="#characteristic-cont" style="color:white; text-decoration:none;" class="me-1">
+                            Преимущества
+                        </a>
+                        <a href="#photos" style="color:white; text-decoration:none;" class="me-1">
+                            Фотографии
+                        </a>
+                        <a href="#feedback" style="color:white; text-decoration:none;" class="me-1">
+                            Отзывы
+                        </a>
+                        <a href="#big-form" style="color:white; text-decoration:none;" class="">
+                            Связаться с нами
+                        </a>
+                    </div>
+                    <div style="width: fit-content;" class="d-flex mb-2 mt-lg-0">
+                        <div class="d-flex align-items-center justify-content-center mx-2">
+                            <i class="fa-solid fa-envelope d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                            <a class="a-classe" href="mailto:info@biom.ru">info@biom.ru<a>
+                            </div>
+                            <div class="align-items-center justify-content-center mx-2 d-none d-md-flex">
+                                <i class="fa-solid fa-phone d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                                <a class="a-classe" href="tel:89806372777">8 980-637-27-77<a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mx-2 d-none d-md-block">
+                                <a href="#big-form" class="btn my-btn  text-center btn-lg px-4">Заказать<a></a>
+                            </div>
+                    </div>
                 </div>
-                <div style="width: fit-content;" class="ms-5 me-5 d-none d-md-block">
-                    <a href="#characteristic-cont" style="color:white; text-decoration:none;" class="me-1">
-                        Преимущества
-                    </a>
-                    <a href="#photos" style="color:white; text-decoration:none;" class="me-1">
-                        Фотографии
-                    </a>
-                    <a href="#feedback" style="color:white; text-decoration:none;" class="me-1">
-                        Отзывы
-                    </a>
-                    <a href="#big-form" style="color:white; text-decoration:none;" class="">
-                        Связаться с нами
-                    </a>
-                </div>
-                <div style="width: fit-content;" class="d-flex mb-2 mt-lg-0">
-                    <div class="d-flex align-items-center justify-content-center mx-2">
-                        <i class="fa-solid fa-envelope d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
-                        <a class="a-classe" href="#">info@biom.ru<a>
-                      </div>
-                      <div class="align-items-center justify-content-center mx-2 d-none d-md-flex">
-                            <i class="fa-solid fa-phone d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
-                            <a class="a-classe" href="#">8 980-637-27-77<a>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-center mx-2 d-none d-md-block">
-                            <a href="#big-form" class="btn my-btn  text-center btn-lg px-4">Заказать<a></a>
-                      </div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-lg-end justify-content-center">
+                        <span>
+                            ©Все права защищены ООО”Биом” 2024г 
+                        </span>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex align-items-center justify-content-lg-start justify-content-center">
+                        <a href="https://nes-agency.ru" style="color:white; text-decoration:none;">
+                            Разработано NES@Agency
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="row align-items-center justify-content-center">
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-lg-end justify-content-center">
-                    <span>
-                        ©Все права защищены ООО”Биом” 2024г 
-                    </span>
-                </div>
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-lg-start justify-content-center">
-                    <a href="https://nes-agency.ru" style="color:white; text-decoration:none;">
-                        Разработано NES@Agency
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    <script src="{% static "app.js" %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
