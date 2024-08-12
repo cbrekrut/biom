@@ -36,7 +36,7 @@ if (ScrollTrigger.isTouch !==1) {
     gsap.fromTo('.left-part', { y: -200, opacity: 0 }, {
         opacity: 1, y: 0,
         scrollTrigger: {
-            trigger: '.selling-container', 
+            trigger: '.gallery-1', 
             start: 'top',
             end: 'bottom', 
             scrub: true
@@ -46,7 +46,7 @@ if (ScrollTrigger.isTouch !==1) {
     gsap.fromTo('.right-part', { y: 200, opacity: 0 }, {
         opacity: 1, y: 0,
         scrollTrigger: {
-            trigger: '.selling-container', 
+            trigger: '.gallery-1', 
             start: 'top',
             end: 'bottom', 
             scrub: true

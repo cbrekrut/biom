@@ -24,7 +24,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-dark fixed-top bg-dark mt-3 mb-5 mx-4 py-2 px-2">
+        <nav class="navbar navbar-dark fixed-top bg-dark mt-3 mb-5 mx-4 py-2 px-2" id="navbar">
             <div class="container-fluid">
               <a class="navbar-brand" href="/">
                 <img src="{% static 'media/logo.svg' %}" alt="logo" style="object-fit: contain;">
@@ -56,6 +56,7 @@
                         <a class="nav-link active fs-4 fw-bold my-2" href="#characteristic-cont">Преимущества</a>
                         <a class="nav-link active fs-4 fw-bold my-2" href="#photos">Фотографии</a>
                         <a class="nav-link active fs-4 fw-bold my-2" href="#feedback">Отзывы</a>
+                        <a class="nav-link active fs-4 fw-bold my-2" href="{% url "instruction" %}">Инструкция</a>
                         <a class="nav-link active fs-4 fw-bold my-2" href="#big-form">Связаться с нами</a>
                     </li>
                   </ul>
@@ -78,6 +79,7 @@
         </nav>
     </header>
         <main>
+            <!-- HERO -->
             <div class="hero">
                 <div class="container mr-10 pt-5 mb-5 pb-5" style="position: relative; height: 100vh;">
                     <i class="fa-solid fa-cloud fa-7x cloud-1" style="color:#604CC3; position: absolute;top:20%; left:-25%; z-index: 0;"></i>
@@ -101,51 +103,28 @@
                     </div>
                 </div>
             </div>
+            <!-- VARIANTS -->
             <div class="container selling-container" style="position: relative;">
                 <div class="row selling-row d-flex justify-content-center align-items-center">
                     <div class="col-12 col-lg-6" style="z-index:1; height:50vh;">
-                            <div id="carouselOptions" class="carousel slide" style="height: 100%;">
-                                <div class="carousel-inner" style="height: 100%;">
-                                    <div class="carousel-item active" style="height: 100%;">
-                                        <img src="{% static "media/1.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/2.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/3.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/4.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/5.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/6.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/7.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/8.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/9.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                        <img src="{% static "media/10.webp" %}" alt="" style="height: 100%; width:100%; object-fit:cover; border-radius:16px;">
-                                    </div>
+                        <div id="carouselOptions" class="carousel slide" style="height: 100%;">
+                            <div class="carousel-inner" style="height: 100%;">
+                                <div class="carousel-item active" style="height: 100%;">
+                                    <img src="{% static 'media/1.webp' %}" alt="" style="height: 100%; width:100%; object-fit:contain; border-radius:16px;">
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselOptions" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselOptions" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
+                                <div class="carousel-item" style="height: 100%;">
+                                    <img src="{% static 'media/2.webp' %}" alt="" style="height: 100%; width:100%; object-fit:contain; border-radius:16px;">
+                                </div>
                             </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselOptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselOptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="col-10 col-lg-4 selling-info d-flex flex-column ani-selling-col">
                         <div class="selling-block-1">
@@ -162,15 +141,15 @@
                         </div>
                         <div class="row d-flex" style="z-index: 1;">
                             <div class="d-inline-flex align-items-center p-0 selling-complectation-block">
-                                <input type="radio" name="radio" checked>
+                                <input type="radio" name="radio" checked data-price="20.000р" data-images='["{% static "media/1.webp" %}", "{% static "media/2.webp" %}"]'>
                                 <div class="selling-complectaion">Базовая</div>
                             </div>
                             <div class="d-inline-flex align-items-center p-0 selling-complectation-block mt-2">
-                                <input type="radio" name="radio">
+                                <input type="radio" name="radio" data-price="25.000р" data-images='["{% static "media/3.webp" %}", "{% static "media/4.webp" %}"]'>
                                 <div class="selling-complectaion">Стандартная</div>
                             </div>
                             <div class="d-inline-flex align-items-center p-0 selling-complectation-block mt-2">
-                                <input type="radio" name="radio">
+                                <input type="radio" name="radio" data-price="40.000р" data-images='["{% static "media/5.webp" %}", "{% static "media/6.webp" %}"]'>
                                 <div class="selling-complectaion">Премиум</div>
                             </div>
                         </div>
@@ -185,14 +164,13 @@
                     </div>
                 </div>
                 <i class="fa-regular fa-star star-1 fa-10x" style="position: absolute; top:15%; left: -3%; z-index: 0; color:#80C4E9;transform: rotate(45deg);"></i>
-                <i class="fa-regular fa-star star-2 fa-5x" style="position: absolute; right:2%; bottom: 10%; z-index: 0; color:#80C4E9;
-                transform: rotate(15deg);"></i>
-                
+                <i class="fa-regular fa-star star-2 fa-5x" style="position: absolute; right:2%; bottom: 10%; z-index: 0; color:#80C4E9; transform: rotate(15deg);"></i>
             </div>
+            <!-- PHOTO GALLERY -->
             <div class="container mt-5 pt-5 gallery-1" id="photos">
                 <div class="row">
                     <div class="col-12 d-none d-md-block">
-                        <div id="carouselVideo" class="carousel slide" style="height: 400px;">
+                        <div id="carouselPhoto" class="carousel slide" style="height: 400px;">
                             <div class="carousel-inner" style="height: 100%;">
                                 <div class="carousel-item active" style="height: 100%;">
                                     <div class="d-none d-md-flex flex-row justify-content-center align-items-center" style="gap: 1rem; border-radius: 32px; height: 100%;">
@@ -210,18 +188,18 @@
                                     </div>
                                     </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideo" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPhoto" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselVideo" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPhoto" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
                     </div>
                     <div class="col-12 d-block d-md-none">
-                        <div id="carouselVideoSM" class="carousel slide" style="height: 400px;">
+                        <div id="carouselPhotoSM" class="carousel slide" style="height: 400px;">
                             <div class="carousel-inner" style="height: 100%;">
                                 <div class="carousel-item active" style="height: 100%;">
                                     <a href="{% static "media/galery/galery.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
@@ -245,6 +223,64 @@
                                     <a href="{% static "media/galery/galery7.jpg" %}" data-toggle="lightbox" style="height: 100%; width: 20%;"><img src="{% static "media/galery/galery7.jpg" %}" alt="suspension" style="height:100%; width:100%; object-fit:cover;"></a>
                                     </div>
                             </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPhotoSM" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPhotoSM" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- VIDEO GALLERY -->
+            <div class="container mt-5 pt-5 gallery-1" id="photos">
+                <div class="row">
+                    <div class="col-12 d-none d-md-block">
+                        <div id="carouselVideo" class="carousel slide" style="height: 400px;">
+                            <div class="carousel-inner" style="height: 100%;">
+                                <div class="carousel-item active" style="height: 100%;">
+                                    <div class="d-none d-md-flex flex-row justify-content-center align-items-center" style="gap: 1rem; border-radius: 32px; height: 100%;">
+                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    </div>
+                                    <div class="carousel-item" style="height: 100%;">
+                                    <div class="d-none d-md-flex flex-row justify-content-center align-items-center"  style="gap: 1rem; height: 100%;">
+                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                    </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideo" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselVideo" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 d-block d-md-none">
+                        <div id="carouselVideoSM" class="carousel slide" style="height: 400px;">
+                            <div class="carousel-inner" style="height: 100%;">
+                                <div class="carousel-item active" style="height: 100%;">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-item" style="height: 100%;">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-item" style="height: 100%;">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideoSM" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
@@ -257,7 +293,7 @@
                     </div>
                 </div>
             </div>
-            
+            <!-- CHARACTERISTIC -->
             <div class="container mt-5 pt-5" id="characteristic-cont">
                 <div class="row">
                     <div class="col-12 col-lg-5 characteristic px-5 py-5 left-part">
@@ -300,8 +336,9 @@
                     </div>
                 </div>
             </div>
+            <!-- MORE CHARACTERISTIC -->
             <div class="container mt-5 py-5">
-                <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-start">
                     <div class="col-12 mb-4 text-center">
                         <span class="display-5">А еще...</span>
                     </div>
@@ -319,6 +356,7 @@
                     </div>
                 </div>
             </div>
+            <!-- EXPLOTATION VARS -->
             <div class="container mt-5 pt-5 variants-ani">
                 <div class="row">
                     <div class="col-12 mb-4 text-center">
@@ -514,6 +552,7 @@
                     </div>
                 </div>
             </div>
+            <!-- FEEDBACK -->
             <div class="container mt-5 pt-5" id="feedback">
                 <div class="row align-items-center justify-content-evenly d-flex">
                     <div class="col-12 col-lg-3 mt-5 mt-lg-0 d-flex align-items-center justify-content-center flex-column feedback-ani-1" style="position: relative; height: 100%; padding:0;">
@@ -560,6 +599,7 @@
                     </div>
                 </div>
             </div>
+            <!-- FORM don't look in my code -->
             <div class="container mt-5 pt-5" id="big-form">
                 <div class="row">
                     <div class="col-12 col-lg-8 form-ani-left">
@@ -602,6 +642,7 @@
                     </div>
                 </div>
             </div>
+            <!-- SERTIFICATES -->
             <div class="container mt-5 pt-5">
                 <div class="row">
                     <div class="col-12 d-none d-md-block">
@@ -672,7 +713,7 @@
             </div>
         </main>
         <footer>
-            <div class="container mt-5" style="background-color: #604CC3; border-radius:16px;">
+            <div class="container my-5" style="background-color: #604CC3; border-radius:16px;">
                 <div class="row align-items-center justify-content-center pt-2">
                     <div style="width: fit-content;">
                         <img src="{% static "media/logo.svg" %}" alt="">
@@ -725,21 +766,41 @@
         document.addEventListener('DOMContentLoaded', function() {
             const priceDisplay = document.querySelector('.selling-price');
             const radioButtons = document.querySelectorAll('input[type="radio"]');
-            
-            radioButtons.forEach((radio, index) => {
+            const carouselInner = document.querySelector('.carousel-inner');
+    
+            radioButtons.forEach((radio) => {
                 radio.addEventListener('change', function() {
-                    let price;
-                    if (index === 0) {
-                        price = '20.000р';
-                    } else if (index === 1) {
-                        price = '25.000р';
-                    } else if (index === 2) {
-                        price = '40.000р';
-                    }
+                    const price = radio.getAttribute('data-price');
+                    const images = JSON.parse(radio.getAttribute('data-images'));
+                    
                     priceDisplay.textContent = `Цена: ${price}`;
+                    
+                    carouselInner.innerHTML = images.map((src, index) => `
+                        <div class="carousel-item ${index === 0 ? 'active' : ''}" style="height: 100%;">
+                            <img src="${src}" alt="" style="height: 100%; width:100%; object-fit:contain; border-radius:16px;">
+                        </div>
+                    `).join('');
                 });
             });
         });
+    </script>
+    <script>
+        let lastScrollTop = 0; // Переменная для хранения позиции прокрутки
+    const navbar = document.getElementById('navbar');
+    function hide() {
+      navbar.classList.add('hide');
+    }
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        // Прокрутка вниз
+        setTimeout(hide, 500);
+      } else {
+        // Прокрутка вверх
+        navbar.classList.remove('hide');
+      }
+      lastScrollTop = scrollTop;
+    });
     </script>
     <script>
         const form = document.getElementById('form');

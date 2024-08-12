@@ -11,3 +11,6 @@ def index(request):
         message = f"Новый заказ!\nEmail: {email}\nТелефон: {phone}\n"
         bot.send_message(TELEGRAM_CHAT_ID, message)
     return render(request,'index.html')
+
+def instruction(request):
+    return render(request,'instruction.html')

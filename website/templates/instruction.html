@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="биом, фк пирамида, детский комплекс, детский комплекс пирамида" />
+    <meta name="description" content="ФК Пирамида предназначен" />
+    <link href="{% static 'bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" >
+    <script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/animation.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    
+    
+    <title>ФК Пирамида - Инструкция по сборке</title>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark fixed-top bg-dark mt-3 mb-5 mx-4 py-2 px-2" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">
+                <img src="{% static 'media/logo.svg' %}" alt="logo" style="object-fit: contain;">
+              </a>
+              <div class="align-items-center justify-content-between d-none d-lg-flex">
+                <div class="d-flex align-items-center justify-content-center mx-2">
+                    <i class="fa-solid fa-phone d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                    <a class="a-classe" href="tel:89806372777">8 980-637-27-77<a>
+                </div>
+                <div class="d-flex align-items-center justify-content-center mx-2">
+                    <i class="fa-solid fa-envelope d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                    <a class="a-classe" href="mailto:info@biom.ru">info@biom.ru<a>
+                </div>
+                <div class="d-flex align-items-center justify-content-center mx-2">
+                    <a href="#big-form" class="btn my-btn btn-lg px-4">Заказать<a></a>
+                </div>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <img src="{% static 'media/logo.svg' %}" alt="logo" style="object-fit: contain;">
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body mt-5">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-4 fw-bold my-2" href="/#characteristic-cont">Преимущества</a>
+                        <a class="nav-link active fs-4 fw-bold my-2" href="/#photos">Фотографии</a>
+                        <a class="nav-link active fs-4 fw-bold my-2" href="/#feedback">Отзывы</a>
+                        <a class="nav-link active fs-4 fw-bold my-2" href="/#big-form">Связаться с нами</a>
+                    </li>
+                  </ul>
+                  <div class="d-flex d-lg-none flex-column">
+                    <div class="d-flex align-items-center justify-content-center mx-2">
+                        <i class="fa-solid fa-phone d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                        <a class="a-classe" href="tel:89806372777">8 980-637-27-77<a>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-center mx-2">
+                            <i class="fa-solid fa-envelope d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                            <a class="a-classe" href="mailto:info@biom.ru">info@biom.ru<a>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-center mx-2">
+                            <a href="#big-form" class="btn my-btn  text-center btn-lg px-4">Заказать<a></a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+
+        
+    </main>
+    <footer>
+        <div class="container my-5" style="background-color: #604CC3; border-radius:16px;">
+            <div class="row align-items-center justify-content-center pt-2">
+                <div style="width: fit-content;">
+                    <img src="{% static "media/logo.svg" %}" alt="">
+                </div>
+                <div style="width: fit-content;" class="ms-5 me-5 d-none d-md-block">
+                    <a href="/#characteristic-cont" style="color:white; text-decoration:none;" class="me-1">
+                        Преимущества
+                    </a>
+                    <a href="/#photos" style="color:white; text-decoration:none;" class="me-1">
+                        Фотографии
+                    </a>
+                    <a href="/#feedback" style="color:white; text-decoration:none;" class="me-1">
+                        Отзывы
+                    </a>
+                    <a href="/#big-form" style="color:white; text-decoration:none;" class="">
+                        Связаться с нами
+                    </a>
+                </div>
+                <div style="width: fit-content;" class="d-flex mb-2 mt-lg-0">
+                    <div class="d-flex align-items-center justify-content-center mx-2">
+                        <i class="fa-solid fa-envelope d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                        <a class="a-classe" href="mailto:info@biom.ru">info@biom.ru<a>
+                        </div>
+                        <div class="align-items-center justify-content-center mx-2 d-none d-md-flex">
+                            <i class="fa-solid fa-phone d-flex align-items-center justify-content-center" style="width: 2rem; height: 2rem; color: #80C4E9;"></i>
+                            <a class="a-classe" href="tel:89806372777">8 980-637-27-77<a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mx-2 d-none d-md-block">
+                            <a href="#big-form" class="btn my-btn  text-center btn-lg px-4">Заказать<a></a>
+                        </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-lg-end justify-content-center">
+                    <span>
+                        ©Все права защищены ООО”Биом” 2024г 
+                    </span>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-lg-start justify-content-center">
+                    <a href="https://nes-agency.ru" style="color:white; text-decoration:none;">
+                        Разработано NES@Agency
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+</body>
+</html>
+
