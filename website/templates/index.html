@@ -243,20 +243,36 @@
                             <div class="carousel-inner" style="height: 100%;">
                                 <div class="carousel-item active" style="height: 100%;">
                                     <div class="d-none d-md-flex flex-row justify-content-center align-items-center" style="gap: 1rem; border-radius: 32px; height: 100%;">
-                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        <div class="video-container justify-content-center align-items-center d-flex" style="width: 20%; height: 240px; position: relative;">
+                                            <video id="videoPlayer1" style="cursor: pointer; border-radius: 32px; object-fit:cover;" width="100%" height="240">
+                                                <source src="{% static "media/video/1.webm" %}" type="video/webm">
+                                                Ваш браузер не поддерживает видео.
+                                            </video>
+                                            <i class="fa-solid fa-play fa-2x" style="color: #ffffff; position: absolute; top: 47%; left: 47%;"></i>
+                                        </div>
+                                        <div class="video-container justify-content-center align-items-center d-flex" style="width: 20%; height: 240px; position: relative;">
+                                            <video id="videoPlayer2" style="cursor: pointer; border-radius: 32px; object-fit:cover;" width="100%" height="240">
+                                                <source src="{% static "media/video/2.webm" %}" type="video/webm">
+                                                Ваш браузер не поддерживает видео.
+                                            </video>
+                                            <i class="fa-solid fa-play fa-2x" style="color: #ffffff; position: absolute; top: 47%; left: 47%;"></i>
+                                        </div>
+                                        <div class="video-container justify-content-center align-items-center d-flex" style="width: 20%; height: 240px; position: relative;">
+                                            <video id="videoPlayer3" style="cursor: pointer; border-radius: 32px; object-fit:cover;" width="100%" height="240">
+                                                <source src="{% static "media/video/3.webm" %}" type="video/webm">
+                                                Ваш браузер не поддерживает видео.
+                                            </video>
+                                            <i class="fa-solid fa-play fa-2x" style="color: #ffffff; position: absolute; top: 47%; left: 47%;"></i>
+                                        </div>
+                                        <div class="video-container justify-content-center align-items-center d-flex" style="width: 20%; height: 240px; position: relative;">
+                                            <video id="videoPlayer4" style="cursor: pointer; border-radius: 32px; object-fit:cover;" width="100%" height="240">
+                                                <source src="{% static "media/video/4.webm" %}" type="video/webm">
+                                                Ваш браузер не поддерживает видео.
+                                            </video>
+                                            <i class="fa-solid fa-play fa-2x" style="color: #ffffff; position: absolute; top: 47%; left: 47%;"></i>
+                                        </div>
                                     </div>
-                                    </div>
-                                    <div class="carousel-item" style="height: 100%;">
-                                    <div class="d-none d-md-flex flex-row justify-content-center align-items-center"  style="gap: 1rem; height: 100%;">
-                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <iframe width="20%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    </div>
-                                    </div>
+                                </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideo" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -272,13 +288,40 @@
                         <div id="carouselVideoSM" class="carousel slide" style="height: 400px;">
                             <div class="carousel-inner" style="height: 100%;">
                                 <div class="carousel-item active" style="height: 100%;">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <div class="video-container justify-content-center align-items-center d-flex" style="width: 100%; height: 100%; position: relative;">
+                                        <video id="videoPlayer1sm" style="cursor: pointer; border-radius: 32px; object-fit:cover;" width="100%" height="100%">
+                                            <source src="{% static "media/video/1.webm" %}" type="video/webm">
+                                            Ваш браузер не поддерживает видео.
+                                        </video>
+                                        <i class="fa-solid fa-play fa-2x" style="color: #ffffff; position: absolute; top: 47%; left: 47%;"></i>
+                                    </div>
                                 </div>
                                 <div class="carousel-item" style="height: 100%;">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <div class="video-container justify-content-center align-items-center d-flex" style="width: 100%; height: 100%; position: relative;">
+                                        <video id="videoPlayer2sm" style="cursor: pointer; border-radius: 32px; object-fit:cover;" width="100%" height="100%">
+                                            <source src="{% static "media/video/2.webm" %}" type="video/webm">
+                                            Ваш браузер не поддерживает видео.
+                                        </video>
+                                        <i class="fa-solid fa-play fa-2x" style="color: #ffffff; position: absolute; top: 47%; left: 47%;"></i>
+                                    </div>
                                 </div>
                                 <div class="carousel-item" style="height: 100%;">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zyeIy1eP1rc?si=-Dr4TVTsnScb5VQf" style="border-radius: 16px;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <div class="video-container justify-content-center align-items-center d-flex" style="width: 100%; height: 100%; position: relative;">
+                                        <video id="videoPlayer3sm" style="cursor: pointer; border-radius: 32px; object-fit:cover;" width="100%" height="100%">
+                                            <source src="{% static "media/video/3.webm" %}" type="video/webm">
+                                            Ваш браузер не поддерживает видео.
+                                        </video>
+                                        <i class="fa-solid fa-play fa-2x" style="color: #ffffff; position: absolute; top: 47%; left: 47%;"></i>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="height: 100%;">
+                                    <div class="video-container justify-content-center align-items-center d-flex" style="width: 100%; height: 100%; position: relative;">
+                                        <video id="videoPlayer4sm" style="cursor: pointer; border-radius: 32px; object-fit:cover;" width="100%" height="100%">
+                                            <source src="{% static "media/video/4.webm" %}" type="video/webm">
+                                            Ваш браузер не поддерживает видео.
+                                        </video>
+                                        <i class="fa-solid fa-play fa-2x" style="color: #ffffff; position: absolute; top: 47%; left: 47%;"></i>
+                                    </div>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideoSM" data-bs-slide="prev">
@@ -782,6 +825,115 @@
                     `).join('');
                 });
             });
+        });
+    </script>
+    <script>
+        // Получаем элемент видео
+        const video1 = document.getElementById('videoPlayer1');
+        const video2 = document.getElementById('videoPlayer2');
+        const video3 = document.getElementById('videoPlayer3');
+        const video4 = document.getElementById('videoPlayer4');
+        const video1sm = document.getElementById('videoPlayer1sm');
+        const video2sm = document.getElementById('videoPlayer2sm');
+        const video3sm = document.getElementById('videoPlayer3sm');
+        const video4sm = document.getElementById('videoPlayer4sm');
+    
+        // Добавляем обработчик клика
+        video1.addEventListener('click', function() {
+            if (video1.requestFullscreen) {
+                video1.requestFullscreen(); // Запрос на полноэкранный режим
+            } else if (video1.mozRequestFullScreen) { // Firefox
+                video1.mozRequestFullScreen();
+            } else if (video1.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                video1.webkitRequestFullscreen();
+            } else if (video1.msRequestFullscreen) { // IE/Edge
+                video1.msRequestFullscreen();
+            }
+            video1.play(); // Запускаем видео
+        });
+        video2.addEventListener('click', function() {
+            if (video2.requestFullscreen) {
+                video2.requestFullscreen(); // Запрос на полноэкранный режим
+            } else if (video2.mozRequestFullScreen) { // Firefox
+                video2.mozRequestFullScreen();
+            } else if (video2.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                video2.webkitRequestFullscreen();
+            } else if (video2.msRequestFullscreen) { // IE/Edge
+                video2.msRequestFullscreen();
+            }
+            video2.play(); // Запускаем видео
+        });
+        video3.addEventListener('click', function() {
+            if (video3.requestFullscreen) {
+                video3.requestFullscreen(); // Запрос на полноэкранный режим
+            } else if (video3.mozRequestFullScreen) { // Firefox
+                video3.mozRequestFullScreen();
+            } else if (video3.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                video3.webkitRequestFullscreen();
+            } else if (video3.msRequestFullscreen) { // IE/Edge
+                video3.msRequestFullscreen();
+            }
+            video3.play(); // Запускаем видео
+        });
+        video4.addEventListener('click', function() {
+            if (video4.requestFullscreen) {
+                video4.requestFullscreen(); // Запрос на полноэкранный режим
+            } else if (video4.mozRequestFullScreen) { // Firefox
+                video4.mozRequestFullScreen();
+            } else if (video4.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                video4.webkitRequestFullscreen();
+            } else if (video4.msRequestFullscreen) { // IE/Edge
+                video4.msRequestFullscreen();
+            }
+            video4.play(); // Запускаем видео
+        });
+        video1sm.addEventListener('click', function() {
+            if (video1sm.requestFullscreen) {
+                video1sm.requestFullscreen(); // Запрос на полноэкранный режим
+            } else if (video1sm.mozRequestFullScreen) { // Firefox
+                video1sm.mozRequestFullScreen();
+            } else if (video1sm.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                video1sm.webkitRequestFullscreen();
+            } else if (video1sm.msRequestFullscreen) { // IE/Edge
+                video1sm.msRequestFullscreen();
+            }
+            video1sm.play(); // Запускаем видео
+        });
+        video2sm.addEventListener('click', function() {
+            if (video2sm.requestFullscreen) {
+                video2sm.requestFullscreen(); // Запрос на полноэкранный режим
+            } else if (video2sm.mozRequestFullScreen) { // Firefox
+                video2sm.mozRequestFullScreen();
+            } else if (video2sm.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                video2sm.webkitRequestFullscreen();
+            } else if (video2sm.msRequestFullscreen) { // IE/Edge
+                video2sm.msRequestFullscreen();
+            }
+            video2sm.play(); // Запускаем видео
+        });
+        video3sm.addEventListener('click', function() {
+            if (video3sm.requestFullscreen) {
+                video3sm.requestFullscreen(); // Запрос на полноэкранный режим
+            } else if (video3sm.mozRequestFullScreen) { // Firefox
+                video3sm.mozRequestFullScreen();
+            } else if (video3sm.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                video3sm.webkitRequestFullscreen();
+            } else if (video3sm.msRequestFullscreen) { // IE/Edge
+                video3sm.msRequestFullscreen();
+            }
+            video3sm.play(); // Запускаем видео
+        });
+        video4sm.addEventListener('click', function() {
+            if (video4sm.requestFullscreen) {
+                video4sm.requestFullscreen(); // Запрос на полноэкранный режим
+            } else if (video4sm.mozRequestFullScreen) { // Firefox
+                video4sm.mozRequestFullScreen();
+            } else if (video4sm.webkitRequestFullscreen) { // Chrome, Safari и Opera
+                video4sm.webkitRequestFullscreen();
+            } else if (video4sm.msRequestFullscreen) { // IE/Edge
+                video4sm.msRequestFullscreen();
+            }
+            video4sm.play(); // Запускаем видео
         });
     </script>
     <script>
